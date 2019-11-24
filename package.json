@@ -52,9 +52,6 @@
     },
     "np": {
 		"yarn": false,
-		"contents": "dist"
-    },
-    "files": [
-        "dist"
-    ]
+		"contents": "out"
+    }
 }
