@@ -54,10 +54,7 @@
         "vue-jest": "^3.0.5",
         "vue-template-compiler": "^2.6.10"
     },
-    "np": {
-        "yarn": false,
-        "no-publish": true
-    },
+
     "files": [
         "dist/"
     ]
