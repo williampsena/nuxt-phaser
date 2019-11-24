@@ -1,6 +1,6 @@
 {
     "name": "nuxtjs-phaser",
-    "version": "1.0.7",
+    "version": "1.0.6",
     "description": "Empower your Phaser game with Nuxt",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -51,6 +51,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "np": {
-        "yarn": false
+		"yarn": false,
+		"contents": "./dist"
     }
 }
