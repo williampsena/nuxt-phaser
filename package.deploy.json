@@ -1,0 +1,17 @@
+{
+    "name": "nuxtjs-phaser",
+    "version": "1.0.7",
+    "description": "Empower your Phaser game with Nuxt",
+    "main": "index.js",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/williampsena/-nuxt-phaser"
+    },
+    "keywords": [
+        "nuxt",
+        "phaser"
+    ],
+    "author": "William Sena",
+    "license": "MIT"
+}
