@@ -1,6 +1,9 @@
 import { Game } from 'phaser'
 import Vue from 'vue'
-import { PhaserPluginOptions } from './types'
+
+interface PhaserPluginOptions {
+    game: string
+}
 
 export const start = (options: PhaserPluginOptions) => () =>
     require(options.game) as Game
