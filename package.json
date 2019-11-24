@@ -18,11 +18,7 @@
         "build:static": "cp -R ./src/@types ./dist && rm -rf ./dist/__tests__",
         "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
         "lint": "tslint -p tsconfig.json",
-        "prepare": "npm run build",
-        "prepublishOnly": "npm test && npm run lint",
-        "preversion": "npm run lint",
-        "version": "npm run format && git add -A src",
-        "postversion": "git push && git push --tags"
+        "prepare": "npm run build"
     },
     "repository": {
         "type": "git",
@@ -54,9 +50,8 @@
         "vue-jest": "^3.0.5",
         "vue-template-compiler": "^2.6.10"
     },
-    "files": [
-        "index.js",
-        "index.ts.d",
-        "@types"
-    ]
+    "np": {
+		"yarn": false,
+		"contents": "dist"
+	}
 }
