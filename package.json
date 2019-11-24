@@ -10,7 +10,7 @@
     "singleQuote": true
   },
   "scripts": {
-    "build": "rimraf ./build && tsc",
+    "build": "rimraf ./dist && tsc",
     "test": "jest"
   },
   "author": "William Sena",
