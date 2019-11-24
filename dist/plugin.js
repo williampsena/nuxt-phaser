@@ -9,7 +9,7 @@ exports.start = function (options) { return function () {
 }; };
 function default_1(options) {
     vue_1.default.prototype.$phaser = {
-        start: exports.start(options)
+        start: exports.start(options),
     };
 }
 exports.default = default_1;

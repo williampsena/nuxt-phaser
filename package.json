@@ -1,8 +1,9 @@
 {
   "name": "nuxtjs-phaser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "prettier": {
     "trailingComma": "es5",
     "tabWidth": 4,
@@ -10,9 +11,27 @@
     "singleQuote": true
   },
   "scripts": {
-    "build": "rimraf ./dist && tsc",
-    "test": "jest"
+    "test": "jest",
+    "build": "npm run build:clean && npm run build:tsc && npm run build:static",
+    "build:clean": "rimraf ./dist ",
+    "build:tsc": "tsc",
+    "build:static": "cp -R ./src/@types ./dist && rm -rf ./dist/__tests__",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williampsena/-nuxt-phaser"
+  },
+  "keywords": [
+    "nuxt",
+    "phaser"
+  ],
   "author": "William Sena",
   "license": "MIT",
   "dependencies": {
@@ -26,8 +45,11 @@
     "babel-core": "^7.0.0-bridge.0",
     "jest": "^24.9.0",
     "jest-canvas-mock": "^2.2.0",
+    "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
     "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.7.2",
     "vue": "^2.6.10",
     "vue-jest": "^3.0.5",

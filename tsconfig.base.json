@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "skipLibCheck": true,
+        "target": "es5",
+        "module": "commonjs",
+        "lib": [
+            "es6",
+            "es7",
+            "dom",
+            "scripthost"
+        ],
+        "allowJs": false,
+        "declaration": true,
+        "outDir": "dist",
+        "rootDir": "src",
+        "strict": true,
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "typeRoots": [
+            "./node_modules/phaser/types",
+            "./node_modules/@nuxt/types/config/plugin.d.ts"
+        ],
+        "types": [
+            "@types/jest",
+            "@types/node",
+            "phaser"
+        ]
+    }
+}
