@@ -15,7 +15,7 @@
         "build": "npm run build:clean && npm run build:tsc && npm run build:static",
         "build:clean": "rimraf ./dist ",
         "build:tsc": "tsc",
-        "build:static": "cp -R ./src/@types ./dist && rm -rf ./dist/__tests__",
+        "build:static": "cp package.json dist/ && cp -R ./src/@types ./dist && rm -rf ./dist/__tests__",
         "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
         "lint": "tslint -p tsconfig.json",
         "prepare": "npm run build"
