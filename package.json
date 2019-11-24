@@ -51,7 +51,6 @@
         "vue-template-compiler": "^2.6.10"
     },
     "np": {
-		"yarn": false,
-		"contents": "out"
+		"yarn": false
     }
 }
