@@ -1,6 +1,6 @@
 # Nuxt Phaser
 
-This plugin empower yout game using nuxt.
+This plugin empower your game using nuxt.
 
 # Why Vue and Nuxt?
 
