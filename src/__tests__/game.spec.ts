@@ -18,6 +18,6 @@ describe('PhaserGame.vue', () => {
                 createGame,
             },
         })
-        expect(wrapper.html()).toMatch('Phaser')
+        expect(wrapper.html()).toMatch('phaser')
     })
 })
