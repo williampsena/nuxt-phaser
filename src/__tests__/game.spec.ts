@@ -9,12 +9,13 @@ describe('PhaserGame.vue', () => {
     })
 
     test('should mount component', () => {
-        const game = new Game({
-            parent: 'phaser',
-        })
+        const createGame = () =>
+            new Game({
+                parent: 'phaser',
+            })
         const wrapper = mount(PhaserGame, {
             propsData: {
-                game,
+                createGame,
             },
         })
         expect(wrapper.html()).toMatch('Phaser')
