@@ -1,9 +1,22 @@
-import { shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
+import { Game } from 'phaser'
 import PhaserGame from '~/phaserGame.vue'
+import startPlugin from '../'
 
 describe('PhaserGame.vue', () => {
+    beforeAll(() => {
+        startPlugin()
+    })
+
     test('should mount component', () => {
-        const wrapper = shallowMount(PhaserGame)
-        expect(wrapper.text()).toBeTruthy()
+        const game = new Game({
+            parent: 'phaser',
+        })
+        const wrapper = mount(PhaserGame, {
+            propsData: {
+                game,
+            },
+        })
+        expect(wrapper.html()).toMatch('Phaser')
     })
 })

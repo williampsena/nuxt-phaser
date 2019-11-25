@@ -1,15 +1,10 @@
-import { Game } from 'phaser'
+import 'phaser'
 import Vue from 'vue'
+import { PhaserPlugin } from './@types'
+import { start } from './helpers'
 
-interface PhaserPluginOptions {
-    game: string
-}
-
-export const start = (options: PhaserPluginOptions) => () =>
-    require(options.game) as Game
-
-export default function(options: PhaserPluginOptions) {
+export default function() {
     Vue.prototype.$phaser = {
-        start: start(options),
-    }
+        start,
+    } as PhaserPlugin
 }

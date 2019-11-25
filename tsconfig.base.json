@@ -1,8 +1,9 @@
 {
     "compilerOptions": {
         "skipLibCheck": true,
-        "target": "es5",
-        "module": "commonjs",
+        "target": "esnext",
+        "module": "esnext",
+        "moduleResolution": "node",
         "lib": [
             "es6",
             "es7",
@@ -18,7 +19,8 @@
         "esModuleInterop": true,
         "typeRoots": [
             "./node_modules/phaser/types",
-            "./node_modules/@nuxt/types/config/plugin.d.ts"
+            "./node_modules/@nuxt/types/config/plugin.d.ts",
+            "./src/@types"
         ],
         "types": [
             "@types/jest",
