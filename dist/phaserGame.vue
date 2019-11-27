@@ -10,14 +10,16 @@ export default Vue.extend({
         createGame: { required: true },
     },
     data: () => ({
-        game: undefined
+        game: undefined,
     }),
     mounted() {
-        this.game = this.createGame()
-        this.$phaser.start(this.game)
+        this.$nextTick(() => {
+            this.game = this.createGame()
+            this.$phaser.start(this.game)
+        })
     },
     beforeDestroy() {
-        if(this.game) this.game.destroy(true, true)
+        if (this.game) this.game.destroy()
     },
 })
 </script>
