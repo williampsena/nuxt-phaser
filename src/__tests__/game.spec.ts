@@ -1,11 +1,14 @@
 import { mount } from '@vue/test-utils'
 import { Game } from 'phaser'
+import Vue from 'vue'
 import PhaserGame from '~/phaserGame.vue'
 import startPlugin from '../'
 
+const mockInject = () => (Vue.prototype.$phaser = window.PhaserNuxt)
+
 describe('PhaserGame.vue', () => {
     beforeAll(() => {
-        startPlugin()
+        startPlugin(null, mockInject)
     })
 
     test('should mount component', () => {

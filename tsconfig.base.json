@@ -10,7 +10,7 @@
             "dom",
             "scripthost"
         ],
-        "allowJs": false,
+        "allowJs": true,
         "declaration": true,
         "outDir": "./dist",
         "rootDir": "src",

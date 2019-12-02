@@ -1,2 +1,2 @@
 /// <reference types="phaser" />
-export declare const start: (game: Phaser.Game) => void;
+export declare const initialize: (game: Phaser.Game) => void;

@@ -1,5 +1,8 @@
-import Vue from 'vue'
+import { getEventEmitter } from './events'
 
-export const start = (game: Phaser.Game) => {
-    Vue.prototype.$phaser.game = game
+export const initialize = (game: Phaser.Game) => {
+    const eventEmitter = getEventEmitter(game)
+
+    window.PhaserNuxt.game = game
+    window.PhaserNuxt.eventEmitter = eventEmitter
 }

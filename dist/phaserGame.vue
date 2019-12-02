@@ -5,7 +5,7 @@
 <script type="ts">
 import Vue from 'vue'
 
-export default Vue.extend({
+export default {
     props: {
         createGame: { required: true },
     },
@@ -15,11 +15,11 @@ export default Vue.extend({
     mounted() {
         this.$nextTick(() => {
             this.game = this.createGame()
-            this.$phaser.start(this.game)
+            this.$phaser.initialize(this.game)
         })
     },
     beforeDestroy() {
         if (this.game) this.game.destroy()
     },
-})
+}
 </script>

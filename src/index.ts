@@ -1,10 +1,11 @@
 import 'phaser'
-import Vue from 'vue'
-import { PhaserPlugin } from './@types'
-import { start } from './helpers'
+import { initialize } from './helpers'
 
-export default function() {
-    Vue.prototype.$phaser = {
-        start,
-    } as PhaserPlugin
+type AnyFunction = (...args: any[]) => void
+
+export default (_context: any, inject: AnyFunction) => {
+    window.PhaserNuxt = {
+        initialize,
+    }
+    inject('phaser', window.PhaserNuxt)
 }
