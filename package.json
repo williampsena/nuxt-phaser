@@ -3,7 +3,7 @@
     "version": "1.0.14",
     "description": "Empower your Phaser game with Nuxt",
     "main": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "types": "@types/index.d.ts",
     "prettier": {
         "trailingComma": "es5",
         "tabWidth": 4,
