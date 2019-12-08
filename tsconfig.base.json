@@ -18,8 +18,7 @@
         "esModuleInterop": true,
         "typeRoots": [
             "./node_modules/phaser/types",
-            "./node_modules/@nuxt/types/config/plugin.d.ts",
-            "./src/@types"
+            "./types"
         ],
         "types": [
             "@types/jest",
