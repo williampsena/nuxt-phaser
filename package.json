@@ -1,6 +1,6 @@
 {
     "name": "nuxtjs-phaser",
-    "version": "1.0.16",
+    "version": "1.0.17",
     "description": "Empower your Phaser game with Nuxt",
     "main": "dist/index.js",
     "types": "@types/index.d.ts",
