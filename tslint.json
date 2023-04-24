@@ -1,8 +1,0 @@
-{
-    "extends": ["tslint:recommended", "tslint-config-prettier"],
-    "rules": {
-        "interface-name": [true, "never-prefix"],
-        "curly": [true, "ignore-same-line"],
-        "variable-name": [true, "check-format", "allow-leading-underscore"]
-    }
-}

@@ -1,18 +1,18 @@
 module.exports = {
-    testEnvironment: 'jsdom',
     roots: ['<rootDir>/src'],
-    testMatch: [
-        '**/__tests__/**/*.+(ts|vue)',
-        '**/?(*.)+(spec|test).+(ts|vue)',
-    ],
+    testMatch: ['**/?(*.)+(spec|test).+(ts)'],
     moduleFileExtensions: ['js', 'ts', 'json', 'vue'],
     transform: {
         '^.+\\.ts$': 'ts-jest',
-        '.*\\.(vue)$': 'vue-jest',
+        '.*\\.(vue)$': '@vue/vue3-jest',
     },
     moduleNameMapper: {
         '~/(.*)$': '<rootDir>/src/$1',
     },
-    testURL: 'http://localhost/',
+    testEnvironment: 'jsdom',
+    testEnvironmentOptions: {
+        url: 'http://localhost/',
+        customExportConditions: ['node', 'node-addons'],
+    },
     setupFiles: ['jest-canvas-mock'],
 }

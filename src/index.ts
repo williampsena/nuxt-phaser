@@ -1,11 +1,19 @@
 import 'phaser'
-import { initialize } from './helpers'
+import { App, Plugin } from 'vue'
+import { getEventEmitter } from './events'
 
-type AnyFunction = (...args: any[]) => void
+const initialize = (game: Phaser.Game) => {
+    const eventEmitter = getEventEmitter(game)
 
-export default (_context: any, inject: AnyFunction) => {
-    window.PhaserNuxt = {
-        initialize,
-    }
-    inject('phaser', window.PhaserNuxt)
+    globalThis.VuePhaser.game = game
+    globalThis.VuePhaser.eventEmitter = eventEmitter
 }
+
+export const VuePhaserPlugin: Plugin = {
+    install(app: App, _options: Record<string, any>) {
+        globalThis.VuePhaser = { initialize }
+        app.config.globalProperties.$phaser = globalThis.VuePhaser
+    },
+}
+
+export default VuePhaserPlugin
