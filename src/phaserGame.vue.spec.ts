@@ -3,8 +3,6 @@ import { Game } from 'phaser'
 import PhaserGame from '~/phaserGame.vue'
 import VuePhaserPlugin from './'
 
-// config.plugins.VueWrapper.install(() => VuePhaserPlugin)
-
 describe('PhaserGame.vue', () => {
     test('should mount component', () => {
         const createGame = () =>
