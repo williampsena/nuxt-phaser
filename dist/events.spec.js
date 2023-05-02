@@ -13,7 +13,7 @@ describe('events', () => {
             parent: 'phaser',
         });
         game.scene.add('mock', new MockScene());
-        eventEmitter = getEventEmitter(game);
+        eventEmitter = getEventEmitter();
     });
     test('should listen and emit event', () => {
         const mockEvent = jest.fn();

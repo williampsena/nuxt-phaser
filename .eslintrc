@@ -9,6 +9,7 @@
     ],
 
     "rules": {
+        "no-commonjs": "off",
         "sort-imports": [
             "error",
             {
@@ -52,5 +53,10 @@
                 "no-var": "off"
             }
         }
-    ]
+    ],
+    "env": {
+        "browser": true,
+        "node": true,
+        "es2021": true
+    }
 }

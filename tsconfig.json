@@ -11,7 +11,6 @@
         "strict": true,
         "noImplicitAny": true,
         "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
         "types": ["@types/jest", "@types/node", "phaser"],
         "allowJs": true
     },

@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import { Game } from 'phaser'
 import PhaserGame from '~/phaserGame.vue'
-import VuePhaserPlugin from './'
+import VuePhaserPlugin from './vue.index'
 
 describe('PhaserGame.vue', () => {
     test('should mount component', () => {

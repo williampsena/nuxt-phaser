@@ -11,5 +11,6 @@ declare module 'vue/types/vue' {
 }
 
 declare global {
-    var VuePhaser: PhaserPlugin
+    var NuxtPhaser: PhaserPlugin
+    const defineNuxtPlugin: typeof import('../node_modules/nuxt/dist/app')['defineNuxtPlugin']
 }

@@ -36,6 +36,7 @@
     "license": "MIT",
     "devDependencies": {
         "@babel/preset-env": "^7.21.4",
+        "@nuxt/types": "^2.16.3",
         "@types/jest": "^29.5.1",
         "@types/node": "^18.16.0",
         "@typescript-eslint/eslint-plugin": "^5.59.0",
@@ -44,6 +45,7 @@
         "eslint": "^8.39.0",
         "jest-canvas-mock": "^2.5.0",
         "jest-environment-jsdom": "^29.5.0",
+        "nuxt": "^3.4.3",
         "phaser": "^3.60.0",
         "prettier": "^2.8.8",
         "rimraf": "^5.0.0",

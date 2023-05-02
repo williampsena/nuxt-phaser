@@ -1,18 +1,10 @@
-import { App, Plugin } from 'vue'
-import { getEventEmitter } from './events'
+import { App } from 'vue'
+import VuePhaserPlugin from './vue.index'
 
-const initialize = (game: Phaser.Game) => {
-    const eventEmitter = getEventEmitter()
-
-    globalThis.VuePhaser.game = game
-    globalThis.VuePhaser.eventEmitter = eventEmitter
+interface NuxtApp {
+    vueApp: App
 }
 
-export const VuePhaserPlugin: Plugin = {
-    install(app: App, _options: Record<string, any>) {
-        globalThis.VuePhaser = { initialize }
-        app.config.globalProperties.$phaser = globalThis.VuePhaser
-    },
-}
-
-export default VuePhaserPlugin
+export default defineNuxtPlugin((nuxtApp: NuxtApp) => {
+    nuxtApp.vueApp.use(VuePhaserPlugin)
+})
