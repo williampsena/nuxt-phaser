@@ -1,4 +1,4 @@
-export const getEventEmitter = (game: Phaser.Game) =>
+export const getEventEmitter = () =>
     new Phaser.Events.EventEmitter()
 
 export default {

@@ -17,7 +17,7 @@ describe('events', () => {
         })
 
         game.scene.add('mock', new MockScene())
-        eventEmitter = getEventEmitter(game)
+        eventEmitter = getEventEmitter()
     })
 
     test('should listen and emit event', () => {

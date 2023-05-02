@@ -1,6 +1,6 @@
 /// <reference types="phaser" />
-export declare function getEventEmitter(game: Phaser.Game): Phaser.Events.EventEmitter;
+export declare const getEventEmitter: () => Phaser.Events.EventEmitter;
 declare const _default: {
-    getEventEmitter: typeof getEventEmitter;
+    getEventEmitter: () => Phaser.Events.EventEmitter;
 };
 export default _default;

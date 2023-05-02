@@ -1,9 +1,8 @@
-import 'phaser'
 import { App, Plugin } from 'vue'
 import { getEventEmitter } from './events'
 
 const initialize = (game: Phaser.Game) => {
-    const eventEmitter = getEventEmitter(game)
+    const eventEmitter = getEventEmitter()
 
     globalThis.VuePhaser.game = game
     globalThis.VuePhaser.eventEmitter = eventEmitter

@@ -1,4 +1,4 @@
-import { config, mount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import { Game } from 'phaser'
 import PhaserGame from '~/phaserGame.vue'
 import VuePhaserPlugin from './'

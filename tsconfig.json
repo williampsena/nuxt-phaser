@@ -12,7 +12,8 @@
         "noImplicitAny": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
-        "types": ["@types/jest", "@types/node", "phaser"]
+        "types": ["@types/jest", "@types/node", "phaser"],
+        "allowJs": true
     },
     "include": ["src/**/*.ts", "types/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
     "exclude": ["**/node_modules"]

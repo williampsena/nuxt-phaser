@@ -1,5 +1,5 @@
 {
-    "name": "vue-phaser",
+    "name": "nuxt-phaser",
     "version": "1.0.17",
     "description": "Empower your Phaser game with Vue/Nuxt",
     "main": "dist/index.js",

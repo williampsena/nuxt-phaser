@@ -1,14 +1,13 @@
-import 'phaser';
 import { getEventEmitter } from './events';
 const initialize = (game) => {
-    const eventEmitter = getEventEmitter(game);
-    window.VuePhaser.game = game;
-    window.VuePhaser.eventEmitter = eventEmitter;
+    const eventEmitter = getEventEmitter();
+    globalThis.VuePhaser.game = game;
+    globalThis.VuePhaser.eventEmitter = eventEmitter;
 };
 export const VuePhaserPlugin = {
     install(app, _options) {
-        window.VuePhaser = { initialize };
-        app.provide('phaser', window.VuePhaser);
+        globalThis.VuePhaser = { initialize };
+        app.config.globalProperties.$phaser = globalThis.VuePhaser;
     },
 };
 export default VuePhaserPlugin;
