@@ -1,4 +1,2 @@
-import 'phaser';
-declare type AnyFunction = (...args: any[]) => void;
-declare const _default: (_context: any, inject: AnyFunction) => void;
+declare const _default: import("#app").Plugin<Record<string, unknown>>;
 export default _default;

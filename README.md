@@ -1,10 +1,12 @@
 # Nuxt Phaser
 
-This plugin empowers your game using Nuxt.
+![workflow](https://github.com/williampsena/nuxt-phaser/actions/workflows/main.yml/badge.svg)
+
+This plugin empowers your game using Vue/Nuxt.
 
 # Why Vue and Nuxt?
 
-With Nuxt we can make web development simple and powerful, using these features:
+With Vue/Nuxt you can make web development simple and powerful, using these features:
 
 - Build
 - Tests

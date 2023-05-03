@@ -1,8 +1,5 @@
-import 'phaser';
-import { initialize } from './helpers';
-export default (_context, inject) => {
-    window.PhaserNuxt = {
-        initialize,
-    };
-    inject('phaser', window.PhaserNuxt);
-};
+import { defineNuxtPlugin } from '#app';
+import VuePhaserPlugin from './vue.index';
+export default defineNuxtPlugin((nuxtApp) => {
+    nuxtApp.vueApp.use(VuePhaserPlugin);
+});

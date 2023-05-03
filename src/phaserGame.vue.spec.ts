@@ -1,22 +1,18 @@
 import { mount } from '@vue/test-utils'
 import { Game } from 'phaser'
-import Vue from 'vue'
 import PhaserGame from '~/phaserGame.vue'
-import startPlugin from '../'
-
-const mockInject = () => (Vue.prototype.$phaser = window.PhaserNuxt)
+import VuePhaserPlugin from './vue.index'
 
 describe('PhaserGame.vue', () => {
-    beforeAll(() => {
-        startPlugin(null, mockInject)
-    })
-
     test('should mount component', () => {
         const createGame = () =>
             new Game({
                 parent: 'phaser',
             })
         const wrapper = mount(PhaserGame, {
+            global: {
+                plugins: [VuePhaserPlugin],
+            },
             propsData: {
                 createGame,
             },

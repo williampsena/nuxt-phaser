@@ -3,8 +3,6 @@
 </template>
 
 <script type="ts">
-import Vue from 'vue'
-
 export default {
     props: {
         createGame: { required: true },

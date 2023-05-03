@@ -1,11 +1,6 @@
-import 'phaser'
-import { initialize } from './helpers'
+import { defineNuxtPlugin } from '#app'
+import VuePhaserPlugin from './vue.index'
 
-type AnyFunction = (...args: any[]) => void
-
-export default (_context: any, inject: AnyFunction) => {
-    window.PhaserNuxt = {
-        initialize,
-    }
-    inject('phaser', window.PhaserNuxt)
-}
+export default defineNuxtPlugin((nuxtApp) => {
+    nuxtApp.vueApp.use(VuePhaserPlugin)
+})

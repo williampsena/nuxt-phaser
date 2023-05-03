@@ -5,11 +5,12 @@ export interface PhaserPlugin {
 }
 
 declare module 'vue/types/vue' {
-    export interface Vue {
+    interface Context {
         $phaser: PhaserPlugin
     }
 }
 
 declare global {
-    var PhaserNuxt: PhaserPlugin
+    var NuxtPhaser: PhaserPlugin
+    const defineNuxtPlugin: typeof import('../node_modules/nuxt/dist/app')['defineNuxtPlugin']
 }
