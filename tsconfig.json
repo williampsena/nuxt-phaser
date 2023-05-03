@@ -11,9 +11,19 @@
         "strict": true,
         "noImplicitAny": true,
         "esModuleInterop": true,
-        "types": ["@types/jest", "@types/node", "phaser"],
-        "allowJs": true
+        "types": ["jest", "node", "phaser"],
+        "allowJs": true,
+        "baseUrl": "./",
+        "paths": {
+            "#app": ["node_modules/nuxt/dist/app"],
+            "#app/*": ["node_modules/nuxt/dist/app/*"]
+        }
     },
-    "include": ["src/**/*.ts", "types/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+    "include": [
+        "src/**/*.ts",
+        "types/**/*.d.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue"
+    ],
     "exclude": ["**/node_modules"]
 }

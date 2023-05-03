@@ -1,10 +1,6 @@
-import { App } from 'vue'
+import { defineNuxtPlugin } from '#app'
 import VuePhaserPlugin from './vue.index'
 
-interface NuxtApp {
-    vueApp: App
-}
-
-export default defineNuxtPlugin((nuxtApp: NuxtApp) => {
+export default defineNuxtPlugin((nuxtApp) => {
     nuxtApp.vueApp.use(VuePhaserPlugin)
 })
