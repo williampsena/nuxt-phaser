@@ -56,8 +56,5 @@
     "files": [
         "dist",
         "types"
-    ],
-    "exports": {
-        ".": "./dist/index.js"
-    }
+    ]
 }
