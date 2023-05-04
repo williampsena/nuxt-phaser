@@ -1,30 +1,16 @@
 {
     "compilerOptions": {
         "skipLibCheck": true,
-        "target": "esnext",
-        "module": "esnext",
-        "moduleResolution": "node",
-        "lib": ["es6", "es7", "dom", "scripthost"],
-        "declaration": true,
-        "outDir": "./dist",
-        "rootDir": "src",
+        "target": "es5",
         "strict": true,
-        "noImplicitAny": true,
+        "moduleResolution": "node",
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
-        "types": ["jest", "node", "phaser"],
-        "allowJs": true,
         "baseUrl": "./",
         "paths": {
             "#app": ["node_modules/nuxt/dist/app"],
-            "#app/*": ["node_modules/nuxt/dist/app/*"]
+            "~/*": ["src/*"]
         }
     },
-    "include": [
-        "src/**/*.ts",
-        "types/**/*.d.ts",
-        "src/**/*.tsx",
-        "src/**/*.vue"
-    ],
-    "exclude": ["**/node_modules"]
+    "include": ["src/**/*", "types/**/*"]
 }

@@ -1,6 +1,7 @@
-import { defineNuxtPlugin } from '#app'
+import PhaserGame from './phaserGame.vue'
 import VuePhaserPlugin from './vue.index'
+import NuxtPhaserPlugin from './plugin'
 
-export default defineNuxtPlugin((nuxtApp) => {
-    nuxtApp.vueApp.use(VuePhaserPlugin)
-})
+export { PhaserGame, VuePhaserPlugin, NuxtPhaserPlugin }
+
+export default NuxtPhaserPlugin
