@@ -43,7 +43,7 @@ this.$phaser.initialize(myGame)
 You can load phaser using vue component:
 
 ```vue
-import PhaserGame from 'nuxtjs-phaser/dist/phaserGame.vue'
+import PhaserGame from 'nuxtjs-phaser/phaserGame.vue'
 
 <div>
     <PhaserGame :createGame="createGame" />
