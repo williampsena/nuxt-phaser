@@ -1,3 +1,4 @@
+declare module 'nuxtjs-phaser/vue.index'
 export interface PhaserPlugin {
     game?: Phaser.Game
     initialize: (game: Phaser.Game) => void
