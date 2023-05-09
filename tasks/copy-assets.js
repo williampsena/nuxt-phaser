@@ -24,11 +24,20 @@ function savePackageJson(packageJson) {
     )
 }
 
+function copyAssets() {
+    shelljs.cp('./types/*', './dist/@types')
+    shelljs.cp('./src/phaserGame.vue', './dist')
+}
+
+function removeAssets() {
+    shelljs.rm('-rf', ['./dist/*.spec.js', './__mocks__'])
+}
+
 const packageJson = loadPackageJson()
 
 cleanPackageJson(packageJson)
 fixPaths(packageJson)
 savePackageJson(packageJson)
 
-shelljs.cp('./src/phaserGame.vue', './dist')
-shelljs.rm('-rf', ['./dist/*.spec.js', './__mocks__'])
+copyAssets()
+removeAssets()
