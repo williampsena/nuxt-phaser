@@ -4,6 +4,7 @@
 
 This plugin empowers your game using Vue/Nuxt.
 
+
 # Why Vue and Nuxt?
 
 With Vue/Nuxt you can make web development simple and powerful, using these features:
