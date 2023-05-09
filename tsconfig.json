@@ -10,7 +10,8 @@
         "paths": {
             "#app": ["node_modules/nuxt/dist/app"],
             "~/*": ["src/*"]
-        }
+        },
+        "typeRoots": ["./node_modules/@types", "./src/types"]
     },
     "include": ["src/**/*", "types/**/*"]
 }
