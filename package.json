@@ -1,7 +1,7 @@
 {
     "name": "nuxtjs-phaser",
     "version": "3.0.8",
-    "description": "Empower your Phaser game with Vue/Nuxt",
+    "description": "Empower your Phaser game with Vue/Nuxt.",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
     "umd:main": "dist/umd/index.js",
