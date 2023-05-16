@@ -93,3 +93,10 @@ this.$phaser.eventEmitter.emit('restart', 'default')
 Check out this project sample.
 
 https://github.com/williampsena/nuxt-phaser-example
+<<<<<<< Updated upstream
+=======
+
+## Articles
+
+- [Creating amazing games using Phaser and Vue (Nuxt/Vite)](https://willsena.dev/creating-amazing-games-using-phaser-and-vue-nuxt-vite)
+>>>>>>> Stashed changes
