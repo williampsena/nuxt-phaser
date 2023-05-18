@@ -27,7 +27,7 @@ function savePackageJson(packageJson) {
 function copyAssets() {
     shelljs.cp('./src/types/*', './dist/@types')
     shelljs.cp('./src/phaserGame.vue', './dist')
-    shelljs.cp('./src/README.md', './dist')
+    shelljs.cp('./README.md', './dist')
 }
 
 function removeAssets() {
