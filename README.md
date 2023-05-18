@@ -4,7 +4,6 @@
 
 This plugin empowers your game using Vue/Nuxt.
 
-
 # Why Vue and Nuxt?
 
 With Vue/Nuxt you can make web development simple and powerful, using these features:
@@ -97,3 +96,4 @@ https://github.com/williampsena/nuxt-phaser-example
 ## Articles
 
 - [Creating amazing games using Phaser and Vue (Nuxt/Vite)](https://willsena.dev/creating-amazing-games-using-phaser-and-vue-nuxt-vite)
+https://github.com/williampsena/nuxt-phaser-example

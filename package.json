@@ -1,15 +1,9 @@
 {
     "name": "nuxtjs-phaser",
-    "version": "3.0.8",
+    "version": "3.0.13",
     "description": "Empower your Phaser game with Vue/Nuxt",
-    "main": "dist/cjs/index.js",
-    "module": "dist/esm/index.js",
-    "umd:main": "dist/umd/index.js",
-    "types": "dist/types/index.d.js",
-    "browser": {
-        "./phaserGame.vue": "src/phaserGame.vue",
-        "./dist/phaserGame.vue": "src/phaserGame.vue"
-    },
+    "module": "dist/index.js",
+    "types": "dist/@types/index.d.ts",
     "prettier": {
         "trailingComma": "es5",
         "tabWidth": 4,
@@ -19,19 +13,18 @@
     "scripts": {
         "test": "jest",
         "ci": "npm run build && npm run test && npm run lint && npm run check",
-        "build": "npm run build:clean && npm run build:cjs && npm run build:esm && npm run build:umd && npm run build:types && npm run build:vue",
-        "build:cjs": "tsc -p config/tsconfig.cjs.json",
+        "build": "npm run build:clean && npm run build:esm && npm run build:types && npm run build:assets",
         "build:esm": "tsc -p config/tsconfig.esm.json",
-        "build:umd": "tsc -p config/tsconfig.umd.json",
         "build:types": "tsc -p config/tsconfig.types.json",
         "build:clean": "rimraf ./dist ",
-        "build:vue": "node tasks/copy-vue.js",
+        "build:assets": "node tasks/copy-assets.js",
         "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
         "lint": "eslint . --ext .ts",
         "prepare": "npm run build",
         "preversion": "npm run lint",
         "version": "npm run format && git add -A src",
-        "postversion": "git push && git push --tags"
+        "postversion": "git push && git push --tags",
+        "publish": "npm run build && (cd dist/ && npm publish)"
     },
     "repository": {
         "type": "git",
@@ -43,6 +36,11 @@
     ],
     "author": "William Sena",
     "license": "MIT",
+    "dependencies": {
+        "phaser": "^3.60.0",
+        "vue": "^3.2.47",
+        "typescript": "^5.0.4"
+    },
     "devDependencies": {
         "@babel/preset-env": "^7.21.4",
         "@nuxt/types": "^2.16.3",
@@ -55,17 +53,9 @@
         "jest-canvas-mock": "^2.5.0",
         "jest-environment-jsdom": "^29.5.0",
         "nuxt": "^3.4.3",
-        "phaser": "^3.60.0",
         "prettier": "^2.8.8",
         "rimraf": "^5.0.0",
         "shelljs": "^0.8.5",
-        "ts-jest": "^29.1.0",
-        "typescript": "^5.0.4",
-        "vue": "^3.2.47"
-    },
-    "files": [
-        "dist",
-        "types",
-        "src/phaserGame.vue"
-    ]
+        "ts-jest": "^29.1.0"
+    }
 }
