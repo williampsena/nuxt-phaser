@@ -104,4 +104,3 @@ Check out this project sample.
 ## Articles
 
 - [Creating amazing games using Phaser and Vue Nuxt/Vite](https://willsena.dev/creating-amazing-games-using-phaser-and-vue-nuxt-vite)
-https://github.com/williampsena/nuxt-phaser-example
