@@ -91,7 +91,15 @@ this.$phaser.eventEmitter.emit('restart', 'default')
 
 Check out this project sample.
 
-https://github.com/williampsena/nuxt-phaser-example
+
+- [Nuxt](https://github.com/williampsena/nuxt-phaser-example)
+
+![Nuxt example](./images/nuxtjs-phaser.gif)
+
+
+- [Vue](https://github.com/williampsena/vue-phaser-example)
+
+![Nuxt example](./images/vue-nuxtjs-phaser.gif)
 
 ## Articles
 
