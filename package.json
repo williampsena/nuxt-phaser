@@ -20,6 +20,7 @@
         "build:assets": "node tasks/copy-assets.js",
         "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
         "lint": "eslint . --ext .ts",
+        "check": "tsc --noEmit",
         "prepare": "npm run build",
         "preversion": "npm run lint",
         "version": "npm run format && git add -A src",
