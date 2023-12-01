@@ -38,7 +38,7 @@
     "author": "William Sena",
     "license": "MIT",
     "dependencies": {
-        "phaser": "^3.60.0",
+        "phaser": "^3.70.0",
         "vue": "^3.2.47",
         "typescript": "^5.0.4"
     },
